@@ -11,10 +11,12 @@ int contadorGlobal1=1, cont=0;
 int contadorGlobal2=1;
 int contadorGlobal3=1;
 char caracter[22];
+char cadena2[22],cadena3[22],cadena4[22],cadena5[22];
 int bandera2=0;
 int bandera1=0;
 int calculo=0;
 int i=0;
+int j=1;
 int inicio=0;
 int16 contadorms=0;
 int contadorval=0;
@@ -45,18 +47,11 @@ void main(void) {
    enable_interrupts(GLOBAL);
 
   set_timer0(15536);
-  
-  int contadoranillob=1,contadoranilloc=0x80,contadoranillod=3;
-  
-  
-  set_tris_b(0x0);
-  
-  
+
    while (1) { 
-   
    if(kbhit()){
          
-            caracter[i]=getch();
+        caracter[i]=getch();
         
         if(caracter[i]>=48 && caracter[i]<=57 || caracter[i] == 59){
             printf("%c",caracter[i]);
@@ -84,7 +79,28 @@ void main(void) {
    }
    
    if(bandera2=1)
-   {}
+   {
+      do{
+         cadena2[j]=j;
+         j++;
+      }while(caracter[j]!=59);
+      do{
+         cadena3[j];
+         j++;
+      }while(caracter[j]!=59);
+      do{
+         cadena4[j];
+         j++;
+      }while(caracter[j]!=59);
+      do{
+         cadena5[j];
+         j++;
+      }while(caracter[j]!=59);
+   }
+   
+   
+   
+   
    output_a(contadorglobal1);
    if(contadorglobal1==256)
       contadorglobal1=1;
